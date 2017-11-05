@@ -6,6 +6,76 @@ Changelog
 
 New features:
 
+- Structure pattern:
+
+  - Make action menu bar sticky.
+  - Make action menu more compact, so that it doesn't break into a newline early.
+  - Use more tooltips in the action menu.
+  [thet]
+
+- Related items pattern:
+
+  - Added options to change sorting.
+  [Gagaro]
+
+Bug fixes:
+
+- Querystring pattern: Fix #716, where the path-depth was added to string values like the title when a path criteria was present.
+  [thet]
+
+- Structure pattern:
+
+  - Set default page icon on item row. Fixes: https://github.com/plone/Products.CMFPlone/issues/2131
+  - Pass event data for the ``structure-url-changed`` event correctly.
+
+  [jensens, thet]
+
+
+2.6.1 (2017-10-03)
+------------------
+
+Bug fixes:
+
+- Restore ability from < 2.5.1 to let the ``drop`` callback be a function.
+  It can still be the name of the function in the global namespace.
+  Fixes #808.
+  [thet]
+
+- Concatenate value for select multiple input in generic popover in the structure pattern.
+  [Gagaro]
+
+
+2.6.0 (2017-09-06)
+------------------
+
+New features:
+
+- Queue validation calls in inlinevalidation pattern using jQuery default queue
+  to ensure validations are called in order and allow custom custom code to be
+  queued after validation has completed
+  [datakurre]
+
+- pattern-pickadate: Emit the ``updated.pickadate.patterns`` event when clicking the "clear" and "now" buttons.
+  [thet]
+
+Bug fixes:
+
+- TinyMCE: Fix seen issue where pattern failed, because importcss_file_filter
+  was already a function
+  [datakurre]
+
+- Translate "Title" for the table template
+  [cillianderoiste]
+
+
+2.5.1 (2017-09-03)
+------------------
+
+New features:
+
+- Query String Widget: Allow configuration of subwidgets.
+  [thet]
+
 - Added docs for the structureupdater pattern.
   [thet]
 
