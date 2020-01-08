@@ -404,6 +404,11 @@ define([
           }
         }
 
+        // Fix issue where paste from Windows clipboard causes non-breaking spaces
+        tinyOptions.paste_postprocess = function(pl, o) {
+          o.node.innerHTML = o.node.innerHTML.replace(/&nbsp;/ig, " ");
+        };
+
         tinymce.init(tinyOptions);
         self.tiny = tinymce.get(self.tinyId);
 
